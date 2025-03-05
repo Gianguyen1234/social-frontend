@@ -16,8 +16,8 @@ export const getPostById = (postId) => {
     return axios.get(`${API_BASE_URL}/posts/${postId}`);
 };
 
-export const updatePost = (postId, postData) => {
-    return axios.put(`${API_BASE_URL}/posts/${postId}`, postData);
+export const updatePost = (postId, data) => {
+    return axios.put(`${API_BASE_URL}/posts/${postId}`, data);
 };
 
 export const deletePost = (postId) => {
