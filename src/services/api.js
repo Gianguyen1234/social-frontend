@@ -2,8 +2,10 @@ import axios from 'axios';
 
 const API_BASE_URL = 'https://mock-api.autobot.site/api/@arist';
 
-export const getPosts = () => {
-    return axios.get(`${API_BASE_URL}/posts`); // No params
+export const getPosts = async () => {
+    const response = await axios.get(`${API_BASE_URL}/posts`);
+    console.log("API Response from api.js:", response.data); // Debug API output
+    return response; // Ensure the correct response is returned
 };
 
 export const createPost = (postData) => {
